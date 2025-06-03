@@ -21,9 +21,9 @@ public class Student {
     //Student Constructor -> Public -> AnyOnce can create Student Object.
     private Student(Builder builder) {
         //Validations -> Start
-        if(builder.getGradYear() > 2024){
-            throw new RuntimeException("grad Year shouldn't be grater than current year");
-        }
+//        if(builder.getGradYear() > 2024){
+//            throw new RuntimeException("grad Year shouldn't be grater than current year");
+//        }
         //validations -> End
 
         this.name = builder.getName();
@@ -49,6 +49,12 @@ public class Student {
         private String phoneNumber;
 
         public Student build() {
+            //validations -> start
+            if(this.getGradYear() > 2024){
+                throw new RuntimeException("grad Year shouldn't be grater than current year");
+            }
+            //validations -> End
+
             return new Student(this); //Private Student Constructor
             // -> cannot be accessed from Outside of the class.
             //Lets move this class inside the Student class

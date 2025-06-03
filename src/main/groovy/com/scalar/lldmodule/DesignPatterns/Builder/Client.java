@@ -24,3 +24,14 @@ public class Client {
         System.out.println("DEBUG: ");
     }
 }
+
+
+/*
+Steps followed to make the code more intuitive ->
+1. Static getBuilder method in Student class.
+2. build() method inside Builder class.
+3. Making Student Constructor Private.
+4. Move Builder class inside the Student class.
+5. Make the Builder class static.
+6. Change the Builder setters method return type to Builder itself.
+*/
