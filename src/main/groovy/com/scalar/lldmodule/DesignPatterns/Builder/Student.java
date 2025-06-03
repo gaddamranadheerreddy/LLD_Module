@@ -10,6 +10,10 @@ public class Student {
     private int gradYear;
     private String phoneNumber;
 
+    public static Builder getBuilder(){
+        return new Builder();
+    }
+
     public Student(Builder builder) {
         //Validations -> Start
         if(builder.getGradYear() > 2024){

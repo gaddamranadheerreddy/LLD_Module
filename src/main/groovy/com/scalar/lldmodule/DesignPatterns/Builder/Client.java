@@ -2,7 +2,8 @@ package com.scalar.lldmodule.DesignPatterns.Builder;
 
 public class Client {
     public static void main(String[] args) {
-        Builder builder = new Builder();
+//        Builder builder = new Builder();
+        Builder builder = Student.getBuilder();
         builder.setName("Rana");
         builder.setAge(23);
         builder.setPsp(88);
