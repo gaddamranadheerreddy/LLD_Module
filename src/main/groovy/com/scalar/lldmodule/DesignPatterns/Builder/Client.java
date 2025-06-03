@@ -9,7 +9,8 @@ public class Client {
         builder.setPsp(88);
         builder.setGradYear(2022);
 
-        Student student = new Student(builder);
+//        Student student = new Student(builder);
+        Student student = builder.build();
         System.out.println("DEBUG: ");
     }
 }

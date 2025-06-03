@@ -10,6 +10,10 @@ public class Builder {
     private int gradYear;
     private String phoneNumber;
 
+    public Student build() {
+        return new Student(this);
+    }
+
     public String getName() {
         return name;
     }
